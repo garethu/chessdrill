@@ -1,0 +1,85 @@
+[Event "Rousseau Gambit - Main Line"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5
+
+[Event "Rousseau Gambit - Accept, Main Line"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. exf5 e4 5. Ng5 d5 6. Bb5 Bxf5
+
+[Event "Rousseau Gambit - Accept, Qh5+ Line"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. exf5 e4 5. Qh5+ g6 6. fxg6 Nf6 7. g7+ Nxh5 8. gxh8=Q Bf8
+
+[Event "Rousseau Gambit - Accept, Ng5 Nf6"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. exf5 e4 5. Ng5 Nf6 6. d3 d5 7. Bb3 exd3 8. cxd3 h6 9. Nf3 Bxf5
+
+[Event "Rousseau Gambit - Decline, d3"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. d3 Nf6 5. Ng5 d5 6. exd5 Nxd5 7. Qf3 Be6
+
+[Event "Rousseau Gambit - Decline, Nc3"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. Nc3 Nf6 5. d4 exd4 6. Nxd4 fxe4 7. Nxc6 bxc6 8. Qe2
+
+[Event "Rousseau Gambit - Accept, Ne5 Defense"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. exf5 e4 5. Ng5 d5 6. Bb5 Nge7 7. Qe2 Bxf5 8. Nf7 Qd7
+
+[Event "Rousseau Gambit - Nh4 Variation"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. Nh4 fxe4 5. Qh5+ g6 6. Nxg6 Nf6 7. Qh4 Rg8 8. Nxf8 Rxf8
+
+[Event "Rousseau Gambit - Accept, d4 Line"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. d4 exd4 5. exf5 Nf6 6. Bg5 Be7 7. O-O O-O 8. Re1
+
+[Event "Rousseau Gambit - Early Bb5"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. Bb5 fxe4 5. Nxe5 Qf6 6. Nxc6 dxc6 7. Bc4 Bc5
+
+[Event "Rousseau Gambit - c3 Variation"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. c3 Nf6 5. exf5 e4 6. Nd4 Nxd4 7. cxd4 d5 8. Bb5+ Bd7
+
+[Event "Rousseau Gambit - O-O Variation"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 f5 4. O-O fxe4 5. Nxe5 d5 6. Nxc6 bxc6 7. Bb3 Nf6 8. d3 exd3 9. cxd3
+
+*
