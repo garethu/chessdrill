@@ -59,6 +59,7 @@ const updateBoard = () => {
   
   boardAPI.set({
     fen: fen,
+    turnColor: currentTurn,
     movable: {
       free: false,
       color: trainingActive.value ? currentTurn : 'both',
