@@ -28,6 +28,8 @@ const userColor = ref<'white' | 'black'>('white');
 const currentMoveIndex = ref(0);
 const trainingActive = ref(false);
 const showCompletionDialog = ref(false);
+const startMessage = ref('');
+const startMessageTimeout = ref<number | null>(null);
 
 const initBoard = () => {
   if (!boardElement.value) return;
@@ -367,6 +369,15 @@ const startTraining = () => {
   }
   
   updateBoard();
+ 
+  startMessage.value = 'Training started. You can begin!';
+  if (startMessageTimeout.value) {
+    clearTimeout(startMessageTimeout.value);
+  }
+  startMessageTimeout.value = window.setTimeout(() => {
+    startMessage.value = '';
+    startMessageTimeout.value = null;
+  }, 1000);
   
   // If user is black, make white's first move
   if (userColor.value === 'black' && selectedVariation.value.moves.length > 0) {
@@ -453,6 +464,7 @@ onMounted(() => {
         <button @click="startTraining" :disabled="!selectedVariation">Train</button>
         <button @click="showHint" :disabled="!trainingActive">Hint</button>
       </div>
+      <div v-if="startMessage" class="start-message">{{ startMessage }}</div>
     </div>
     
     <div ref="boardElement" class="chessboard"></div>
@@ -547,6 +559,16 @@ button:disabled {
   display: flex;
   gap: 10px;
   align-items: flex-end;
+}
+
+.start-message {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #e6ffed;
+  border: 1px solid #8fd19e;
+  color: #0f5132;
+  font-weight: 600;
 }
 
 .chessboard {

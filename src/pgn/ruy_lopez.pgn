@@ -1,0 +1,33 @@
+[Event "Ruy Lopez - Threaten capture of knight"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez"]
+[Black "Classical (3...Bc5) Defense"]
+[Result "Threaten capture of Knight"]
+[ECO "C64"]
+[Annotator "ChessGeek"]
+[PlyCount "18"]
+[SourceVersionDate "2026.05.05"]
+
+1.e4 e5 
+2.Nf3 Nc6 
+3.Bb5 Bc5
+4.c3 d6
+5.d4 exd4
+6.cxd4 Bb6
+7.d5 
+
+[Event "Ruy Lopez - Threaten with queen"]
+[Site "?"]
+[Date "2024.08.19"]
+[Round "?"]
+[White "Ruy Lopez"]
+[Black "Classical (3...Bc5) Defense"]
+[Result "*"]
+[ECO "C64"]
+[Annotator "ChessGeek"]
+[PlyCount "18"]
+[SourceVersionDate "2026.05.05"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Bc5 4. c3 d6 5. d4 exd4 6. cxd4 Bb4+ 7. Kf1 Bd7 8. Qa4 Nge7 9. d5 
