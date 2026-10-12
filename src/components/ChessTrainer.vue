@@ -2,9 +2,9 @@
 import { ref, onMounted, nextTick } from 'vue';
 import { Chess } from 'chess.js';
 import { parse as parsePgn } from '@mliebelt/pgn-parser';
-import { Chessground } from 'chessground';
-import type { Api } from 'chessground/api';
-import type { Key } from 'chessground/types';
+import { Chessground } from '@lichess-org/chessground';
+import type { Api } from '@lichess-org/chessground/api';
+import type { Key } from '@lichess-org/chessground/types';
 
 interface Variation {
   name: string;
@@ -483,9 +483,9 @@ onMounted(() => {
 </template>
 
 <style>
-@import 'chessground/assets/chessground.base.css';
-@import 'chessground/assets/chessground.brown.css';
-@import 'chessground/assets/chessground.cburnett.css';
+@import '@lichess-org/chessground/assets/chessground.base.css';
+@import '@lichess-org/chessground/assets/chessground.brown.css';
+@import '@lichess-org/chessground/assets/chessground.cburnett.css';
 </style>
 
 <style scoped>
