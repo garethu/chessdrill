@@ -29,7 +29,23 @@ const currentMoveIndex = ref(0);
 const trainingActive = ref(false);
 const showCompletionDialog = ref(false);
 const startMessage = ref('');
+const startMessageVisible = ref(false);
 const startMessageTimeout = ref<number | null>(null);
+
+const showStartMessage = (message: string) => {
+  startMessage.value = message;
+  startMessageVisible.value = true;
+
+  if (startMessageTimeout.value) {
+    clearTimeout(startMessageTimeout.value);
+  }
+
+  startMessageTimeout.value = window.setTimeout(() => {
+    startMessageVisible.value = false;
+    startMessage.value = '';
+    startMessageTimeout.value = null;
+  }, 1000);
+};
 
 const initBoard = () => {
   if (!boardElement.value) return;
@@ -369,15 +385,8 @@ const startTraining = () => {
   }
   
   updateBoard();
- 
-  startMessage.value = 'Training started. You can begin!';
-  if (startMessageTimeout.value) {
-    clearTimeout(startMessageTimeout.value);
-  }
-  startMessageTimeout.value = window.setTimeout(() => {
-    startMessage.value = '';
-    startMessageTimeout.value = null;
-  }, 1000);
+
+  showStartMessage('Training started. You can begin!');
   
   // If user is black, make white's first move
   if (userColor.value === 'black' && selectedVariation.value.moves.length > 0) {
@@ -464,11 +473,12 @@ onMounted(() => {
         <button @click="startTraining" :disabled="!selectedVariation">Train</button>
         <button @click="showHint" :disabled="!trainingActive">Hint</button>
       </div>
-      <div v-if="startMessage" class="start-message">{{ startMessage }}</div>
     </div>
+
+    <div class="start-message" :class="{ visible: startMessageVisible }" v-show="startMessageVisible">{{ startMessage }}</div>
     
     <div ref="boardElement" class="chessboard"></div>
-    
+
     <!-- Completion Dialog -->
     <div v-if="showCompletionDialog" class="dialog-overlay" @click="closeCompletionDialog">
       <div class="dialog" @click.stop>
@@ -562,13 +572,28 @@ button:disabled {
 }
 
 .start-message {
-  margin-top: 12px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  z-index: 30;
   padding: 10px 14px;
   border-radius: 8px;
   background-color: #e6ffed;
   border: 1px solid #8fd19e;
   color: #0f5132;
   font-weight: 600;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, max-height 0.2s ease, padding 0.2s ease;
+}
+
+.start-message.visible {
+  opacity: 1;
+  max-height: 60px;
+  transform: translateX(-50%) translateY(0);
 }
 
 .chessboard {
